@@ -67,7 +67,7 @@ const sendEditor = async (m,cmd, error = true,cap = Config.caption?.split("\n")[
     if(!gfxx.includes(cmd)) return 
     try{
         let mm =   m.image ? m : m.reply_message && m.reply_message.image ? m.reply_message : false; 
-        if (!mm || !photo.includes(mm.mtype2)) return m.reply(`*_Uhh Dear,  Reply To An Image!_*`);
+        if (!mm || !photo.includes(mm.mtype2)) return m.reply(`*Please reply to an image, video, or GIF to create the sticker.*`);
         let media = await m.bot.downloadAndSaveMediaMessage(mm);
         var anu = ""
         try{ anu = (await createUrl(media,"uguMashi")).url; if(!anu) throw new Error("invalid Media!") }
@@ -93,7 +93,7 @@ for (let i = 0; i < gfxx.length; i++) {
       async (m, text, {smd}) => { 
         try{ 
             if(gfxold.includes(smd)){ await photoEditor(m , smd); }else { sendEditor(m,smd) } 
-        } catch (err) { await message.error(`${err}\n\ncommand: ${smd}`,err,"Request Denied!")}  }
+        } catch (err) { await message.error(`${err}\n\ncommand: ${smd}`,err,"Server down! Try again later.")}  }
     )
   }
 
