@@ -74,8 +74,8 @@
    },
    "--repository": {
       "type": "git",
-      "url": "git+https://github.com/r0lith/Rolith-md/.git"
+      "url": "git+https://github.com/r0lith/suhail-whatsapp-bot.git"
    },
-   "--bugs": { "url": "https://github.com/r0lith/Rolith-md//issues" },
-   "--homepage": "https://github.com/r0lith/Rolith-md/#readme"
+   "--bugs": { "url": "https://github.com/r0lith/suhail-whatsapp-bot/issues" },
+   "--homepage": "https://github.com/r0lith/suhail-whatsapp-bot/#readme"
 }
